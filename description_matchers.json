@@ -92,8 +92,8 @@
     },
     {
         "match": {
-            "type": "exact",
-            "exact": "instacart"
+            "type": "keyword",
+            "keyword": "instacart"
         },
         "assign": {
             "merchant": "Instacart",
@@ -209,6 +209,7 @@
             "exact": "bevri"
         },
         "assign": {
+            "merchant": "bevri",
             "category": "dining",
             "tags": ["food", "dining", "restaraunts"]
         }
@@ -221,6 +222,17 @@
         "assign": {
             "category": "cafe",
             "tags": ["cafe", "coffee", "bakery"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?ikea\\.com (?P<order_number>\\d*)"
+        },
+        "assign": {
+            "merchant": "ikea",
+            "category": "furniture",
+            "tags": ["furniture", "shopping"]
         }
     }
 ]
