@@ -234,6 +234,17 @@
             "category": "furniture",
             "tags": ["furniture", "shopping"]
         }
-    }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "pamf .*?"
+        },
+        "assign": {
+            "merchant": "Palo Alto Medical Foundation",
+            "category": "health",
+            "tags": ["hospital", "health", "doctor"]
+        }
+    } 
 ]
 
