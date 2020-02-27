@@ -1,0 +1,227 @@
+[
+    {
+        "match": {
+            "type": "exact",
+            "exact": "late fee for payment due"
+        },
+        "assign": {
+            "category": "fees",
+            "tags": ["important", "fees"],
+            "description": "Credit Card late payment fee",
+            "merchant": "Bank Of America"
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "interest charged on purchases"
+        },
+        "assign": {
+            "category": "fees",
+            "tags": ["important", "fees"],
+            "description": "Credit Card late payment fee",
+            "merchant": "Bank Of America"
+        }
+    }, 
+    {
+        "match": {
+            "type": "exact",
+            "exact": "payment - thank you"
+        },
+        "assign": {
+            "category": "fees",
+            "tags": ["important"],
+            "description": "Credit Card payment",
+            "merchant": "Bank Of America"
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "^instacart .*?"
+        },
+        "assign": {
+            "merchant": "Instacart",
+            "category": "groceries",
+            "tags": ["groceries", "essentials", "food"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "^walgreens #(?P<merchant_location>\\d*)"
+        },
+        "assign": {
+            "merchant": "walgreens",
+            "category": "pharmacy",
+            "tags": ["pharmacy", "essentials"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "^trader joe's #(?P<merchant_location>\\d*) qps"
+        },
+        "assign": {
+            "merchant": "trader joe's",
+            "category": "grocery",
+            "tags": ["grocery", "essentials"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "safeway #(?P<merchant_location>\\d*)"
+        },
+        "assign": {
+            "merchant": "safeway",
+            "category": "grocery",
+            "tags": ["grocery", "essentials"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "philz coffee"
+        },
+        "assign": {
+            "merchant": "philz coffee",
+            "category": "cafe",
+            "tags": ["coffee"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "instacart"
+        },
+        "assign": {
+            "merchant": "Instacart",
+            "category": "groceries",
+            "tags": ["groceries", "essentials", "food"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "starbucks"
+        },
+        "assign": {
+            "merchant": "starbucks",
+            "category": "cafe",
+            "tags": ["coffee", "cafe"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?pharmacy.*?"
+        },
+        "assign": {
+            "category": "pharmacy",
+            "tags": ["essentials", "pharmacy"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "anima pro"
+        },
+        "assign": {
+            "category": "business",
+            "tags": ["business", "software"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*? cafe .*?"
+        },
+        "assign": {
+            "category": "cafe",
+            "tags": ["food", "cafe"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "target \\d+"
+        },
+        "assign": {
+            "merchant": "target",
+            "category": "shopping",
+            "tags": ["shopping", "department store"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "cognition cyclery"
+        },
+        "assign": {
+            "category": "shopping",
+            "tags": ["sport", "shopping"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?mediterranean.*?"
+        },
+        "assign": {
+            "category": "dining",
+            "tags": ["food", "dining", "restaraunts"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?haircut.*?"
+        },
+        "assign": {
+            "category": "self care",
+            "tags": ["haircut", "self care", "beauty"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?grocery.*?"
+        },
+        "assign": {
+            "category": "groceries",
+            "tags": ["groceries", "food", "essentials"]
+        }
+    },
+    {
+        "match": {
+            "type": "keyword",
+            "keyword": "toys"
+        },
+        "assign": {
+            "category": "toys",
+            "tags": ["toys", "kids"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "bevri"
+        },
+        "assign": {
+            "category": "dining",
+            "tags": ["food", "dining", "restaraunts"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?boulanger.*?"
+        },
+        "assign": {
+            "category": "cafe",
+            "tags": ["cafe", "coffee", "bakery"]
+        }
+    }
+]
+
