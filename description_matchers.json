@@ -29,7 +29,7 @@
             "exact": "payment - thank you"
         },
         "assign": {
-            "category": "fees",
+            "category": "pay_card",
             "tags": ["important"],
             "description": "Credit Card payment",
             "merchant": "Bank Of America"
@@ -64,8 +64,8 @@
         },
         "assign": {
             "merchant": "trader joe's",
-            "category": "grocery",
-            "tags": ["grocery", "essentials"]
+            "category": "groceries",
+            "tags": ["groceries", "essentials"]
         }
     },
     {
@@ -75,8 +75,8 @@
         },
         "assign": {
             "merchant": "safeway",
-            "category": "grocery",
-            "tags": ["grocery", "essentials"]
+            "category": "groceries",
+            "tags": ["groceries", "essentials"]
         }
     },
     {
