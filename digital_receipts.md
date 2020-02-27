@@ -16,3 +16,4 @@ and you can always find items you bought before and buy it again.
 5. Any place that offers square might have it. as digital receipts is part of their platform. TBD to test it.
 Unfortunately Square is rarely used by department stores or groceries where you need itemized receipts the most.
 6. Starbucks if you use their app to pay
+7. Lucky Supermarket with their Rewards (to be confirmed)
