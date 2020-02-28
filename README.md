@@ -1,6 +1,6 @@
 # Jupyter notebook (in python) to analyze spendings.
 
-![notebook screenshot](images/notebook_screenshot.jpg "Notebook screenshot")
+![notebook screenshot](images/notebook_screenshot.png "Notebook screenshot")
 
 
 ### See example of notebook here
