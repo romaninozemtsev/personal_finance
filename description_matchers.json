@@ -25,14 +25,36 @@
     }, 
     {
         "match": {
-            "type": "exact",
-            "exact": "payment - thank you"
+            "type": "regex",
+            "regex": "payment.*?thank.*?you.*?"
         },
         "assign": {
             "category": "pay_card",
             "tags": ["important"],
             "description": "Credit Card payment",
-            "merchant": "Bank Of America"
+            "merchant": "bank"
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "specialtys cafe.*"
+        },
+        "assign": {
+            "merchant": "Specialty's Café & Bakery",
+            "category": "cafe",
+            "tags": ["coffee", "food"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "coupa cafe (?P<merchant_location>.*)"
+        },
+        "assign": {
+            "merchant": "coupa cafe",
+            "category": "cafe",
+            "tags": ["coffee"]
         }
     },
     {
@@ -245,6 +267,159 @@
             "category": "health",
             "tags": ["hospital", "health", "doctor"]
         }
-    } 
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "prime video\\*(?P<order_number>.*)"
+        },
+        "assign": {
+            "merchant": "amazon",
+            "category": "movies and books",
+            "tags": ["movies", "entertainment"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "amazon prime\\*(?P<order_number>.*)"
+        },
+        "assign": {
+            "merchant": "amazon",
+            "category": "shopping",
+            "tags": ["subscription"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "kindle unltd\\*(?P<order_number>.*?)"
+        },
+        "assign": {
+            "merchant": "amazon",
+            "category": "movies and books",
+            "tags": ["movies", "books"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "amzn mktp us\\*(?P<order_number>.*)"
+        },
+        "assign": {
+            "merchant": "amazon",
+            "category": "shopping",
+            "tags": ["shopping"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "anthropologie.com"
+        },
+        "assign": {
+            "merchant": "anthropologie",
+            "category": "shopping",
+            "tags": ["shopping", "online"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "amazon\\.com\\*(?P<order_number>.*)"
+        },
+        "assign": {
+            "merchant": "amazon",
+            "category": "shopping",
+            "tags": ["shopping"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "jenni kayne (?P<merchant_location>.*?)"
+        },
+        "assign": {
+            "merchant": "jenni kane",
+            "category": "shopping",
+            "tags": ["shopping"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": ".*?nespresso.*?"
+        },
+        "assign": {
+            "merchant": "nespresso",
+            "category": "groceries",
+            "tags": ["groceries", "coffee"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "^j\\. crew #(?P<merchant_location>\\d*)"
+        },
+        "assign": {
+            "merchant": "j.crew",
+            "category": "shopping",
+            "tags": ["shopping", "clothing"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "juut (?P<merchant_location>.*)"
+        },
+        "assign": {
+            "merchant": "juut",
+            "category": "shopping",
+            "tags": ["shopping", "clothing"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "apple.com/bill"
+        },
+        "assign": {
+            "merchant": "apple",
+            "category": "shopping",
+            "tags": ["shopping", "apple"]
+        }
+    },
+    {
+        "match": {
+            "type": "regex",
+            "regex": "shell oil (?P<order_number>.*)"
+        },
+        "assign": {
+            "merchant": "shell",
+            "category": "gas",
+            "tags": ["gas", "car"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "uber trip"
+        },
+        "assign": {
+            "merchant": "uber",
+            "category": "travel",
+            "tags": ["taxi"]
+        }
+    },
+    {
+        "match": {
+            "type": "exact",
+            "exact": "uber eats"
+        },
+        "assign": {
+            "merchant": "uber",
+            "category": "food",
+            "tags": ["food", "dining", "takeout"]
+        }
+    }
 ]
-
