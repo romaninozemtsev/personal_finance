@@ -2,3 +2,4 @@ notebook
 python-dateutil
 pandas
 matplotlib
+plotly
