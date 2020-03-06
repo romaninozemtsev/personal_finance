@@ -1,8 +1,10 @@
 import json
 import re
+import os
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
-with open('description_matchers.json') as matchers_config:
+with open(os.path.join(dir_path, '../configs/description_matchers.json')) as matchers_config:
     matchers = json.loads(matchers_config.read())
 
 def try_match(description, matcher):

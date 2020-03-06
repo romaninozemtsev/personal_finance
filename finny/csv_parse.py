@@ -15,8 +15,8 @@ def _read_column_file(columns_meta_file_name):
         return json.loads(columns_meta_file.read())
 
 columns_meta = {
-    'Transaction Date#Post Date#Description#Category#Type#Amount': _read_column_file(join(dir_path, '../chase_columns.json')),
-    'Posted Date#Reference Number#Payee#Address#Amount': _read_column_file(join(dir_path,'../bofa_columns.json'))
+    'Transaction Date#Post Date#Description#Category#Type#Amount': _read_column_file(join(dir_path, '../configs/chase_columns.json')),
+    'Posted Date#Reference Number#Payee#Address#Amount': _read_column_file(join(dir_path,'../configs/bofa_columns.json'))
 }
 
 def _clean_name_and_type(key: str, value: str, columns_meta: dict):
