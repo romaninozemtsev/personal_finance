@@ -1,4 +1,4 @@
-from csv import DictReader
+from csv import DictReader, DictWriter
 from datetime import datetime
 import json
 import os
@@ -64,3 +64,14 @@ def read_transactions_from_folder(tx_file_folder):
     for csv_file in only_csv_files:
         all_transactions.extend(read_transactions_file(csv_file))
     return all_transactions
+
+def write_enhanced_transactions(transactions, output_tx_file):
+    with open(output_tx_file, 'w') as csvfile:
+        fieldnames = [
+            "date","ref_num","description","address","amount",
+            "type","merchant","category","tags","merchant_location","order_number",
+            "point_of_sale", "bank_tx_type", "bank_category", "tx_date"
+        ]
+        writer = DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(transactions)
