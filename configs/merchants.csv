@@ -1,0 +1,88 @@
+merchant,category
+amazon,shopping
+target,shopping
+Minamoto Kitchoan,shopping
+Cranberry Scoop,shopping
+Daiso,shopping
+terrain.com,shopping
+the sill,shopping
+apple,shopping
+nespresso,shopping
+uber trip,taxi
+Lyft,taxi
+uber eats,restaurants
+the crepe stop,restaurants
+Lakeside Cafe,restaurants
+Onigilly,restaurants
+Bumble,restaurants
+New Mongolian BBQ,restaurants
+Oren's Hummus,restaurants
+Sajj,restaurants
+masa sushi,restaurants
+zpizza,restaurants
+bevri,restaurants
+amazon kindle,books
+kindle unlimited,subscription
+amazon prime,subscription
+prime video,movies
+Victoria's Secret,clothing
+MaxMara,clothing
+Gap,clothing
+H&M,clothing
+everlane,clothing
+lucky brand,clothing
+j.crew,clothing
+jenni kane,clothing
+anthropologie,clothing
+100 Percent Pure,cosmetics
+Lush Cosmetics,cosmetics
+Arby's,fast_food
+Sugarfina,food
+Coffee Bean,coffee_shop
+Adorable Bakery,coffee_shop
+Manresa Bread,coffee_shop
+Peet's Coffee,coffee_shop
+Cafe Venetia,coffee_shop
+Little Sky Bakery,coffee_shop
+The Prolific Oven,coffee_shop
+Blue Bottle Coffee,coffee_shop
+Coffee & More,coffee_shop
+Paris Baguette,coffee_shop
+starbucks,coffee_shop
+alexander's patisserie,coffee_shop
+maison alyzee,coffee_shop
+joe and the juice,coffee_shop
+la baguette,coffee_shop
+philz coffee,coffee_shop
+Specialty's Café & Bakery,coffee_shop
+coupa cafe,coffee_shop
+Diddams,gifts
+Taste Nutrition,school_food
+East Bay Regional Park District,parks
+MTS.ru,phone
+Google Voice,phone
+REI,sport_outdoor_shopping
+the north face,sport_outdoor_shopping
+cognition cyclery,sport_outdoor_shopping
+Lucky Supermarket,groceries
+Ava's downtown market,groceries
+Felipe's Market,groceries
+Whole Foods,groceries
+Bianchinis Market,groceries
+nob hill,groceries
+99 ranch market,groceries
+marukai market,groceries
+Instacart,groceries
+trader joe's,groceries
+safeway,groceries
+Chevron,gas
+76,gas
+shell,gas
+Southwest Airlines,air_travel
+Delta Airlines,air_travel
+Alaska Airlines,air_travel
+juut,hair
+Palo Alto Medical Foundation,doctor
+ikea,furniture
+walgreens,pharmacy
+anima pro,business

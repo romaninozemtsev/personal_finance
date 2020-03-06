@@ -1,0 +1,104 @@
+operation,expression,merchant
+regex,specialtys cafe.*,Specialty's Café & Bakery
+regex,coupa cafe (?P<merchant_location>.*),coupa cafe
+regex,^instacart .*?,Instacart
+regex,.*?/instacart,Instacart
+unknown,unknown,Instacart
+regex,^walgreens #(?P<merchant_location>\d*),walgreens
+regex,^trader joe's #(?P<merchant_location>\d*) qps,trader joe's
+regex,safeway #(?P<merchant_location>\d*),safeway
+exact,philz coffee,philz coffee
+exact,anima pro,anima pro
+regex,target \d+,target
+exact,cognition cyclery,cognition cyclery
+exact,bevri,bevri
+regex,.*?ikea\.com (?P<order_number>\d*),ikea
+regex,ikea (?P<merchant_location>.*),ikea
+regex,pamf .*?,Palo Alto Medical Foundation
+regex,prime video\*(?P<order_number>.*),prime video
+regex,amzn digital\*(?P<order_number>.*),prime video
+regex,amazon prime\*(?P<order_number>.*),amazon prime
+exact,amazon prime,amazon prime
+regex,kindle unltd\*(?P<order_number>.*?),kindle unlimited
+regex,kindle svcs\*(?P<order_number>.*?),amazon kindle
+regex,amzn mktp us\*(?P<order_number>.*),amazon
+exact,amzn mktp us,amazon
+exact,amazon.com,amazon
+regex,amazon\.com\*(?P<order_number>.*),amazon
+exact,anthropologie.com,anthropologie
+regex,jenni kayne (?P<merchant_location>.*?),jenni kane
+regex,.*?nespresso.*?,nespresso
+regex,^j\. crew #(?P<merchant_location>\d*),j.crew
+regex,juut (?P<merchant_location>.*),juut
+exact,apple.com/bill,apple
+regex,shell oil (?P<order_number>.*),shell
+regex,^76 - (?P<merchant_location>.*),76
+exact,uber trip,uber trip
+exact,uber *trip,uber trip
+exact,uber eats,uber eats
+exact,uber *eats,uber eats
+regex,zpizza - (?P<merchant_location>.*),zpizza
+exact,la baguette,la baguette
+regex,lucky brand #(?P<order_number>.*),lucky brand
+exact,marukai market,marukai market
+exact,joe the juice new york,joe and the juice
+exact,masa sushi japan,masa sushi
+exact,maison alyzee,maison alyzee
+regex,99 ranch #(?P<merchant_location>.*),99 ranch market
+regex,nob hill #(?P<merchant_location>.*),nob hill
+exact,alexander's patisserie,alexander's patisserie
+regex,starbucks store (?P<merchant_location>.*),starbucks
+exact,starbucks,starbucks
+exact,paris baguette,Paris Baguette
+regex,.*everlane.*,everlane
+regex,.*eileen fisher.*,eileen fisher
+regex,.* the sill$,the sill
+exact,terrain.com,terrain.com
+exact,alaska air,Alaska Airlines
+regex,alaska air (?P<order_number>.*),Alaska Airlines
+regex,delta air (?P<order_number>.*),Delta Airlines
+regex,southwes (?P<order_number>.*),Southwest Airlines
+exact,hm.com,H&M
+exact,google *voice,Google Voice
+regex,bianchinis market .*,Bianchinis Market
+regex,lyft \*ride (?P<order_number>.*),Lyft
+regex,sajj (?P<merchant_location>.*),Sajj
+regex,chevron .*,Chevron
+regex,wholefds .*,Whole Foods
+exact,felipe's market,Felipe's Market
+exact,ava's downtown market,Ava's downtown market
+regex,oren s hummus .*,Oren's Hummus
+regex,daiso .*,Daiso
+regex,paris baguette .*,Paris Baguette
+exact,coffee & more,Coffee & More
+regex,lucky .*,Lucky Supermarket
+regex,blue bottle .*,Blue Bottle Coffee
+regex,lush .*,Lush Cosmetics
+exact,the prolific oven,The Prolific Oven
+exact,little sky bakery,Little Sky Bakery
+regex,^gap .*,Gap
+exact,cafe venetia,Cafe Venetia
+regex,janie and jack .*,Janie and Jack
+regex,peet's (?P<merchant_location>.*),Peet's Coffee
+regex,maxmara (?P<merchant_location>.*),MaxMara
+regex,victoria's secret .*,Victoria's Secret
+exact,beard papa,Beard Papa
+exact,new mongolian bbq,New Mongolian BBQ
+exact,bumble,Bumble
+regex,manresa bread .*,Manresa Bread
+exact,cranberry scoop,Cranberry Scoop
+regex,onigilly - (?P<merchant_location>.*),Onigilly
+exact,lakeside cafe,Lakeside Cafe
+regex,^rei (?P<merchant_location>.*),REI
+regex,pay.mts.ru.*,MTS.ru
+exact,eastbaypkdist,East Bay Regional Park District
+exact,taste nutrition services,Taste Nutrition
+exact,adorable bakery llc,Adorable Bakery
+exact,diddams,Diddams
+regex,.*?coffee bean,Coffee Bean
+exact,sugarfina,Sugarfina
+exact,minamoto kitchoan,Minamoto Kitchoan
+regex,^arby's-(?P<merchant_location>.*),Arby's
+regex,^100 percent pure (?P<merchant_location>.*),100 Percent Pure
+regex,^the north face # (?P<merchant_location>.*),the north face
+regex,.*?the crepe stop.*?,The Crepe Stop

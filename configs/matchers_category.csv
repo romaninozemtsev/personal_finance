@@ -1,0 +1,12 @@
+operation,expression,category
+exact,late fee for payment due,fees
+exact,interest charged on purchases,fees
+regex,payment.*?thank.*?you.*?,pay_card
+regex,.*?pharmacy.*?,pharmacy
+regex,.*? cafe .*?,coffee_shop
+regex,.*?mediterranean.*?,restaurants
+regex,.*?haircut.*?,hair
+regex,.*?grocery.*?,groceries
+unknown,unknown,toys
+regex,.*?boulanger.*?,coffee_shop
+exact,foreign transaction fee,foreign_transaction_fee
