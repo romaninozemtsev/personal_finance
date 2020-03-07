@@ -69,7 +69,7 @@ def write_enhanced_transactions(transactions, output_tx_file):
     with open(output_tx_file, 'w') as csvfile:
         fieldnames = [
             "date","ref_num","description","address","amount",
-            "type","merchant","category","tags","merchant_location","order_number",
+            "type","merchant","category","root_category","tags","merchant_location","order_number",
             "point_of_sale", "bank_tx_type", "bank_category", "tx_date"
         ]
         writer = DictWriter(csvfile, fieldnames=fieldnames)

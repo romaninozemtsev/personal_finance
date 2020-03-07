@@ -3,7 +3,7 @@ regex,specialtys cafe.*,Specialty's Café & Bakery
 regex,coupa cafe (?P<merchant_location>.*),coupa cafe
 regex,^instacart .*?,Instacart
 regex,.*?/instacart,Instacart
-unknown,unknown,Instacart
+exact,instacart,Instacart
 regex,^walgreens #(?P<merchant_location>\d*),walgreens
 regex,^trader joe's #(?P<merchant_location>\d*) qps,trader joe's
 regex,safeway #(?P<merchant_location>\d*),safeway
@@ -102,3 +102,9 @@ regex,^arby's-(?P<merchant_location>.*),Arby's
 regex,^100 percent pure (?P<merchant_location>.*),100 Percent Pure
 regex,^the north face # (?P<merchant_location>.*),the north face
 regex,.*?the crepe stop.*?,The Crepe Stop
+exact,learning express toys,learning express toys
+regex,le boulanger .*,le boulanger
+regex,onsite haircuts.*,onsite haircuts
+regex,sunnyvale grocery o.*,grocery outlet
+regex,cvs/pharmacy.*,cvs pharmacy
+exact,camino pharmacy,camino pharmacy

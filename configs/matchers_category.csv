@@ -7,6 +7,6 @@ regex,.*? cafe .*?,coffee_shop
 regex,.*?mediterranean.*?,restaurants
 regex,.*?haircut.*?,hair
 regex,.*?grocery.*?,groceries
-unknown,unknown,toys
+keyword,toys,toys
 regex,.*?boulanger.*?,coffee_shop
 exact,foreign transaction fee,foreign_transaction_fee

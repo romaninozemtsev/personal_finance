@@ -43,6 +43,7 @@ matchers_merchant = read_csv_config('matchers_merchant.csv')
 merchants = read_csv_config('merchants.csv')
 categories = read_csv_config('categories.csv')
 
+
 def find_merchant(description):
     for matcher in matchers_merchant:
         operation = matcher["operation"]
@@ -62,10 +63,10 @@ def find_merchant(description):
                 if re_match.groupdict():
                     assign_values = re_match.groupdict()
                 return merchant, extra_values
-        return None
+    return None, {}
 
 def find_category(description):
-    for matcher in matchers_merchant:
+    for matcher in matchers_category:
         operation = matcher["operation"]
         expression = matcher["expression"]
         category = matcher["category"]
@@ -83,7 +84,7 @@ def find_category(description):
                 if re_match.groupdict():
                     assign_values = re_match.groupdict()
                 return category
-        return None
+    return None
 
 
 def find_merchant_category(merchant):
