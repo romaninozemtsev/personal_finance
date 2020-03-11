@@ -29,15 +29,16 @@ jupyter notebook parse_bank_statement.ipynb
 ### Tasks list
 
 - [x] Bank Of America CSV parser
-- [ ] Chase CSV parser
+- [x] Chase CSV parser
 - [ ] Better explicit schema for 'transaction' using typehints or smth like schmeatics.
-- [ ] Separate config file for Merchants
-- [ ] Description matchers should not apply tags. they come from merchant table.
+- [x] Separate config file for Merchants
+- [x] Description matchers should not apply tags. they come from merchant table.
 - [ ] Web scraper instead of CSV
-- [ ] Parse entire folder of CSV filles (mix of BofA and Chase)
+- [x] Parse entire folder of CSV filles (mix of BofA and Chase)
 - [ ] default tags vs custom tags
 - [ ] config list of known subscriptions (e.g netflix is always subscription, but apple can be one time or both)
-
+- [ ] web app with interactive dashboard
+- [ ] migrate current python dict code to pandas
 
 ### How it works
 

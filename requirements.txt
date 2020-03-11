@@ -3,3 +3,5 @@ python-dateutil
 pandas
 matplotlib
 plotly
+dash
+dash-table
