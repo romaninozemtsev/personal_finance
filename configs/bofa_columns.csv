@@ -1,0 +1,6 @@
+source_name,target_name,type,description 
+Posted Date,date,datetime,date of the transaction
+Reference Number,ref_num,str,transaction / reference number
+Payee,description,str,transaction description
+Address,address,str,"address where trasaction happened, most likely just a city"
+Amount,amount,float,amount of money paid

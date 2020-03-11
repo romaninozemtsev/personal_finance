@@ -1,0 +1,8 @@
+source_name,target_name,type,description 
+Transaction Date,tx_date,datetime,date of the transaction
+Post Date,date,datetime,date the transaction was posted
+Reference Number,ref_num,str,transaction / reference number
+Description,description,str,transaction description 
+Category,bank_category,str,bank assigned category based on their heuristics
+Type,bank_tx_type,str,"transaction type set by bank - sale, payment etc"
+Amount,amount,float,amount of money paid
