@@ -2,8 +2,8 @@
 
 1. open transactions list and click 'download'
 
-![chase step1](docs/images/chase_download_step1.png "Chase download step 1")
+![chase step1](images/chase_download_step1.png "Chase download step 1")
 
-2. select "CSV"
+1. select "CSV"
 
-![chase step2](docs/images/chase_download_step2.png "Chase download step2")
+![chase step2](images/chase_download_step2.png "Chase download step2")
