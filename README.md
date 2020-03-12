@@ -1,6 +1,6 @@
 # Jupyter notebook (in python) to analyze spendings.
 
-![notebook screenshot](images/notebook_screenshot.png "Notebook screenshot")
+![notebook screenshot](docs/images/notebook_screenshot.png "Notebook screenshot")
 
 
 ### See example of notebook here
@@ -57,15 +57,12 @@ source venv/bin/activate
 - [ ] deduplicate transactions by either ref number or hash
 - [ ] support checking/savings account transactions csv (BofA and Chase)
 
+
 ### How it works
 
-Logically this is processing pipeline:
-
-1. web ui (bank specific)
-2. raw transactions CSV data (bank specific)
-3. cleaned and stadardized to common format (stadardized)
-4. extra data extracted: merchants, subscriptions, bills
-5. enrich data: apply tags and categories
-6. display : tables and charts; allow interactivity.
-
-
+1. raw transactions CSV data (different formats per bank)
+2. cleaned and stadardized to common format
+3. infer extra data from description - merchants, categories, subscriptions/bills 
+4. display:
+   1. notebook
+   2. plot.ly app
