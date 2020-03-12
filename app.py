@@ -30,7 +30,7 @@ spending_per_day_df = df[df['type']=='debit'].set_index('date').resample('D').su
 # ax.bar(t_df.index, t_df['amount'])
 
 app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    html.H1(children='My spendings'),
 
     html.Div(children='''
         Dash: A web application framework for Python.

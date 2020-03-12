@@ -7,12 +7,23 @@
 [notebook preview](https://github.com/romaninozemtsev/personal_finance/blob/master/parse_bank_statement.ipynb)
 
 
-### How to run
+### How to run interactive notebooks
 ```
 git clone https://github.com/romaninozemtsev/personal_finance.git
 python3 -m venv venv
 source venv/bin/activate
-jupyter notebook parse_bank_statement.ipynb
+(venv) jupyter notebook parse_bank_statement.ipynb
+```
+
+### Single command to convert csv folder to single enhanced CSV
+```
+(venv) python process_statements.py
+```
+
+
+### Open plot.ly dashboard with generated statement
+```
+(venv) python app.py
 ```
 
 
@@ -39,6 +50,7 @@ jupyter notebook parse_bank_statement.ipynb
 - [ ] config list of known subscriptions (e.g netflix is always subscription, but apple can be one time or both)
 - [ ] web app with interactive dashboard
 - [ ] migrate current python dict code to pandas
+- [ ] deduplicate transactions by either ref number or hash
 
 ### How it works
 

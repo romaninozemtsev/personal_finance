@@ -1,51 +1,18 @@
-import json
 import re
 import os
-from csv import DictReader
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-with open(os.path.join(dir_path, '../configs/description_matchers.json')) as matchers_config:
-    matchers = json.loads(matchers_config.read())
-
-def try_match(description, matcher):
-    match = matcher["match"]
-    if match["type"] == "exact":
-        if description == match["exact"]:
-            return matcher["assign"]
-    elif match["type"] == "keyword":
-        parts = re.split(' |\.|,|\n', description)
-        if match["keyword"] in parts:
-            return matcher["assign"]
-    elif match["type"] == "regex":
-        re_match = re.match(match["regex"], description)
-        if re_match:
-            assign_values = matcher["assign"]
-            if re_match.groupdict():
-                assign_values.update(re_match.groupdict())
-            return assign_values
-    return None
-
-def parse_description(description):
-    for matcher in matchers:
-        assign_values = try_match(description, matcher)
-        if assign_values:
-            return assign_values
+from definitions import config_path
+import pandas as pd
 
 
-def read_csv_config(config_name):
-    with open(os.path.join(dir_path, '../configs/', config_name)) as config_file:
-        reader = DictReader(config_file)
-        return list(x for x in reader)
-
-matchers_category = read_csv_config('matchers_category.csv')
-matchers_merchant = read_csv_config('matchers_merchant.csv')
-merchants = read_csv_config('merchants.csv')
-categories = read_csv_config('categories.csv')
+matchers_category = pd.read_csv(config_path('matchers_category.csv'))
+matchers_merchant = pd.read_csv(config_path('matchers_merchant.csv'))
+merchants = pd.read_csv(config_path('merchants.csv')).set_index('merchant')
+categories = pd.read_csv(config_path('categories.csv')).set_index('category')
+categories['parent'] = categories['parent'].fillna('')
 
 
 def find_merchant(description):
-    for matcher in matchers_merchant:
+    for index, matcher in matchers_merchant.iterrows():
         operation = matcher["operation"]
         expression = matcher["expression"]
         merchant = matcher["merchant"]
@@ -65,8 +32,9 @@ def find_merchant(description):
                 return merchant, extra_values
     return None, {}
 
+
 def find_category(description):
-    for matcher in matchers_category:
+    for index, matcher in matchers_category.iterrows():
         operation = matcher["operation"]
         expression = matcher["expression"]
         category = matcher["category"]
@@ -88,22 +56,18 @@ def find_category(description):
 
 
 def find_merchant_category(merchant):
-    for m in merchants:
-        if m["merchant"] == merchant:
-            return m["category"]
+    return merchants.loc[merchant]['category']
 
 
 def find_root_category(category):
-    for c in categories:
-        if c["category"] == category:
-            if c["parent"]:
-                return find_root_category(c["parent"])
-            else:
-                return category
-    return category
+    parent = categories.loc[category]["parent"]
+    if parent:
+        return find_root_category(parent)
+    else:
+        return category
 
 
-def parse_tx2(description):
+def parse_description(description):
     merchant, extra_values = find_merchant(description)
     if merchant:
         category = find_merchant_category(merchant)
@@ -121,20 +85,15 @@ def parse_tx2(description):
 
 
 def enhance_transaction(tx):
-    values_to_add = parse_tx2(tx["description"])
-    tx_copy = tx.copy()
+    values_to_add = parse_description(tx["description"])
     if values_to_add:
         if "merchant" not in values_to_add:
             # TBD if this is what we want
             values_to_add["merchant"] = tx["description"]
-        tx_copy.update(values_to_add)
-    
-   
-    return tx_copy
+        for k, v in values_to_add.items():
+            tx[k] = v
+    return tx
 
-def enhance_transactions(transactions):
-    result = []
-    for tx in transactions:
-        tx_copy = enhance_transaction(tx)
-        result.append(tx_copy)
-    return result
+
+def enhance_transactions(transactions_df):
+    return transactions_df.apply(enhance_transaction, axis=1)
