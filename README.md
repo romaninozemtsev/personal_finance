@@ -7,11 +7,15 @@
 [notebook preview](https://github.com/romaninozemtsev/personal_finance/blob/master/parse_bank_statement.ipynb)
 
 
-### How to run interactive notebooks
+### Setup
 ```
 git clone https://github.com/romaninozemtsev/personal_finance.git
 python3 -m venv venv
 source venv/bin/activate
+```
+
+### How to run interactive notebooks
+```
 (venv) jupyter notebook parse_bank_statement.ipynb
 ```
 
@@ -51,6 +55,7 @@ source venv/bin/activate
 - [ ] web app with interactive dashboard
 - [ ] migrate current python dict code to pandas
 - [ ] deduplicate transactions by either ref number or hash
+- [ ] support checking/savings account transactions csv (BofA and Chase)
 
 ### How it works
 
